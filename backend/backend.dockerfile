@@ -6,6 +6,7 @@ WORKDIR /lab9-backend
 COPY mvnw .          
 COPY .mvn/ .mvn
 COPY pom.xml ./
+RUN chmod +x mvnw
 
 COPY src ./src
 
@@ -17,7 +18,7 @@ FROM eclipse-temurin:21-jdk
 WORKDIR /lab9-backend
 COPY --from=builder /lab9-backend/target/*.jar lab9-backend.jar
 
-EXPOSE 3030
+EXPOSE 1778
 
 ENTRYPOINT ["java", "-jar", "lab9-backend.jar"]
 
