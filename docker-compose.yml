@@ -3,7 +3,7 @@ services:
     image: mysql:8
     container_name: mysql-db
     environment:
-      MYSQL_ROOT_PASSWORD: Bhargavi@1234
+      MYSQL_ROOT_PASSWORD: docker
       MYSQL_DATABASE: restaurantdb
     ports:
       - "3307:3306"
@@ -16,7 +16,7 @@ services:
     image: bhargaviputti/docker-backend-practice:latest
     container_name: springboot
     ports:
-      - "1010:1778"
+      - "2025:1778"
     depends_on:
       - mysqldb
     restart: on-failure
