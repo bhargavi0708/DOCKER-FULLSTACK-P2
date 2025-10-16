@@ -4,7 +4,7 @@ services:
     container_name: mysql-db
     environment:
       MYSQL_ROOT_PASSWORD: Bhargavi@1234
-      MYSQL_DATABASE: sportsdb
+      MYSQL_DATABASE: restaurantdb
     ports:
       - "3307:3306"
     volumes:
